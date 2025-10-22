@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToCoToCo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>ToCoToCo</h1>
+        <nav>
+            <a href="#intro">Trang chủ</a> |
+            <a href="#products">Sản phẩm</a> |
+            <a href="#contact">Liên hệ</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="intro">
+            <h2>Giới thiệu</h2>
+            <p>Chào mừng bạn đến với ToCoToCo – thương hiệu đồ uống yêu thích của giới trẻ Việt Nam.</p>
+        </section>
+
+        <section id="products">
+            <h2>Sản phẩm nổi bật</h2>
+            <div class="product-controls">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+                    <button id="searchBtn">Tìm</button>
+                </div>
+                <button id="addProductBtn">Thêm sản phẩm</button>
+            </div>
+            <!-- Form thêm sản phẩm mới -->
+            <form id="addProductForm" class="hidden product-form">
+                <div class="form-header">
+                    <h3>Thêm sản phẩm mới</h3>
+                    <button type="button" id="cancelAdd" class="close-btn">&times;</button>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="productName">Tên sản phẩm:</label>
+                        <input type="text" id="productName" name="productName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productImage">URL hình ảnh:</label>
+                        <input type="url" id="productImage" name="productImage" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="productDesc">Mô tả:</label>
+                        <textarea id="productDesc" name="productDesc" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="productPrice">Giá (VNĐ):</label>
+                        <input type="number" id="productPrice" name="productPrice" min="0" step="1000" required>
+                    </div>
+                    <div class="form-actions full-width">
+                        <button type="submit" class="submit-btn">Lưu sản phẩm</button>
+                    </div>
+                </div>
+            </form>
+
+            <div id="product-list">
+                <article class="product-item">
+                    <h3>Trà Sữa Trân Châu Đường Đen</h3>
+                    <div class="product-media">
+                        <img src="https://tocotocotea.com/wp-content/uploads/2025/08/Tra-sua-hanh-phuc-1.jpg" alt="Trà Sữa Trân Châu Đường Đen">
+                    </div>
+                    <p>Thức uống được yêu thích với vị ngọt dịu, béo ngậy và trân châu dẻo mềm.</p>
+                    <p class="price">Giá: <span>35.000₫</span></p>
+                </article>
+
+                <article class="product-item">
+                    <h3>Trà Xanh Macchiato</h3>
+                    <div class="product-media">
+                        <img src="https://tocotocotea.com/wp-content/uploads/2025/06/Xanh-Nhai-Vai-Que-Hoa.jpg" alt="Trà Xanh Macchiato">
+                    </div>
+                    <p>Vị trà xanh tươi mát kết hợp lớp kem sữa mịn màng.</p>
+                    <p class="price">Giá: <span>40.000₫</span></p>
+                </article>
+
+                <article class="product-item">
+                    <h3>Trà Sữa Khoai Môn</h3>
+                    <div class="product-media">
+                        <img src="https://tocotocotea.com/wp-content/uploads/2025/08/Chien-than-topping-khong-lo.jpg" alt="Trà Sữa Khoai Môn">
+                    </div>
+                    <p>Vị khoai môn thơm béo, ngọt dịu, được nhiều khách hàng yêu thích.</p>
+                    <p class="price">Giá: <span>38.000₫</span></p>
+                </article>
+            </div>
+
+            <!-- Form thêm sản phẩm mới -->
+            <form id="addProductForm" class="hidden">
+                <h3>Thêm sản phẩm mới</h3>
+                <div class="form-group">
+                    <label for="productName">Tên sản phẩm:</label>
+                    <input type="text" id="productName" name="productName" required>
+                </div>
+                <div class="form-group">
+                    <label for="productImage">URL hình ảnh:</label>
+                    <input type="url" id="productImage" name="productImage" required>
+                </div>
+                <div class="form-group">
+                    <label for="productDesc">Mô tả:</label>
+                    <textarea id="productDesc" name="productDesc" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="productPrice">Giá (VNĐ):</label>
+                    <input type="number" id="productPrice" name="productPrice" min="0" step="1000" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit">Lưu sản phẩm</button>
+                    <button type="button" id="cancelAdd">Hủy</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="contact">
+            <h2>Liên hệ với ToCoToCo</h2>
+            <form action="#" method="post">
+                <label for="name">Họ và tên:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Nội dung:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+                <button type="submit">Gửi</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 ToCoToCo</p>
+        <p>Liên hệ: contact@tocotoco.vn</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
