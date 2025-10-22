@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToCoToCo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Thêm liên kết đến file CSS -->
 </head>
 <body>
+    <!--Header-->
     <header>
         <h1>ToCoToCo</h1>
+        <!--Nav bar để điều hướng-->
         <nav>
             <a href="#">Trang chủ</a> |
             <a href="#">Sản phẩm</a> |
@@ -17,43 +19,37 @@
     </header>
 
     <main>
+        <!--Giới thiệu-->
         <section>
             <h2>Giới thiệu</h2>
             <p>Chào mừng bạn đến với ToCoToCo – thương hiệu đồ uống yêu thích của giới trẻ Việt Nam.</p>
         </section>
-
+        <!--Sản phẩm nổi bật-->
         <section>
             <h2>Sản phẩm nổi bật</h2>
-            <div id="product-list">
-                <article class="product-item">
-                    <h3>Trà Sữa Trân Châu Đường Đen</h3>
-                    <div class="product-media">
-                        <img src="https://tocotocotea.com/wp-content/uploads/2025/08/Tra-sua-hanh-phuc-1.jpg" alt="Trà Sữa Trân Châu Đường Đen">
-                    </div>
-                    <p>Thức uống được yêu thích với vị ngọt dịu, béo ngậy và trân châu dẻo mềm.</p>
-                    <p class="price">Giá: <span>35.000₫</span></p>
-                </article>
+            <!--Thẻ article để chứa thông tin sản phẩm-->
+            <article>
+                <h3>Trà Sữa Trân Châu Đường Đen</h3>
+                <img src="https://tocotocotea.com/wp-content/uploads/2025/08/Tra-sua-hanh-phuc-1.jpg" alt="Trà Sữa Trân Châu Đường Đen" width="300">
+                <p>Thức uống được yêu thích với vị ngọt dịu, béo ngậy và trân châu dẻo mềm.</p>
+                <p>Giá: 35.000₫</p>
+            </article>
 
-                <article class="product-item">
-                    <h3>Trà Xanh Macchiato</h3>
-                    <div class="product-media">
-                        <img src="https://tocotocotea.com/wp-content/uploads/2025/06/Xanh-Nhai-Vai-Que-Hoa.jpg" alt="Trà Xanh Macchiato">
-                    </div>
-                    <p>Vị trà xanh tươi mát kết hợp lớp kem sữa mịn màng.</p>
-                    <p class="price">Giá: <span>40.000₫</span></p>
-                </article>
+            <article>
+                <h3>Trà Xanh Macchiato</h3>
+                <img src="https://tocotocotea.com/wp-content/uploads/2025/06/Xanh-Nhai-Vai-Que-Hoa.jpg" alt="Trà Xanh Macchiato" width="300">
+                <p>Vị trà xanh tươi mát kết hợp lớp kem sữa mịn màng.</p>
+                <p>Giá: 40.000₫</p>
+            </article>
 
-                <article class="product-item">
-                    <h3>Trà Sữa Khoai Môn</h3>
-                    <div class="product-media">
-                        <img src="https://tocotocotea.com/wp-content/uploads/2025/08/Chien-than-topping-khong-lo.jpg" alt="Trà Sữa Khoai Môn">
-                    </div>
-                    <p>Vị khoai môn thơm béo, ngọt dịu, được nhiều khách hàng yêu thích.</p>
-                    <p class="price">Giá: <span>38.000₫</span></p>
-                </article>
-            </div>
+            <article>
+                <h3>Trà Sữa Khoai Môn</h3>
+                <img src="https://tocotocotea.com/wp-content/uploads/2025/08/Chien-than-topping-khong-lo.jpg" alt="Trà Sữa Khoai Môn" width="300">
+                <p>Vị khoai môn thơm béo, ngọt dịu, được nhiều khách hàng yêu thích.</p>
+                <p>Giá: 38.000₫</p>
+            </article>
         </section>
-
+        <!-- Phần form liên hệ-->
         <section>
             <h2>Liên hệ với ToCoToCo</h2>
             <form action="#" method="post">
@@ -70,7 +66,7 @@
             </form>
         </section>
     </main>
-
+    <!--Footer-->
     <footer>
         <p>© 2025 ToCoToCo</p>
         <p>Liên hệ: contact@tocotoco.vn</p>
