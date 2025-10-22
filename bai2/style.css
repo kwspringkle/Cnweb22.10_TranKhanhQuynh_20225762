@@ -1,0 +1,228 @@
+/* Basic reset and global styles */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  background: #f5f7fb;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  background: #1f2a44; /* dark blue */
+  color: #fff;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+/* Nav - horizontal */
+nav {
+  font-size: 0.95rem;
+}
+
+nav a {
+  color: #e6eefb;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background: rgba(255,255,255,0.06);
+}
+
+/* Main content layout */
+main {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+section {
+  margin-bottom: 28px;
+  background: transparent;
+}
+
+section h2 {
+  margin-top: 0;
+  color: #1b2338;
+  font-size: 1.2rem;
+  border-left: 4px solid #ff8a65;
+  padding-left: 10px;
+}
+
+/* Product list using flexbox */
+#product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 16px;
+}
+
+.product-item {
+  flex: 1 1 30%;
+  border: 1px solid #e3e8f0;
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(16,24,40,0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.product-item h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.05rem;
+  color: #0f1724;
+}
+
+.product-media {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.product-media img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+}
+
+.product-item p {
+  margin: 6px 0;
+  color: #334155;
+}
+
+.product-item .price {
+  margin-top: auto; /* push price to bottom */
+  font-weight: 600;
+  color: #ff6b6b; /* highlight color for price */
+}
+
+/* Form styles */
+form {
+  max-width: 480px;
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #e6eef7;
+  box-shadow: 0 1px 6px rgba(2,6,23,0.04);
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #dbe7f5;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+button[type="submit"] {
+  background: #ff8a65;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button[type="submit"]:hover {
+  background: #ff7043;
+}
+
+/* Footer */
+footer {
+  background: #101826;
+  color: #c7d2e0;
+  text-align: center;
+  padding: 14px 10px;
+  font-size: 0.9rem;
+}
+
+/* Responsive rules */
+@media (max-width: 900px) {
+  .product-item {
+    flex: 1 1 48%;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 6px 6px 0 0;
+  }
+
+  #product-list {
+    flex-direction: column;
+  }
+
+  .product-item {
+    flex: 1 1 100%;
+  }
+
+  main {
+    margin: 12px auto;
+    padding: 0 12px;
+  }
+
+  section h2 {
+    font-size: 1rem;
+  }
+
+  form {
+    width: 100%;
+    box-shadow: none;
+    border: 1px solid #eef2f7;
+  }
+}
+
+/* Small polish */
+a { color: inherit; }
+img { max-width: 100%; }
+
+/* Make images not larger than container by default */
+.product-media img { object-fit: cover; }
